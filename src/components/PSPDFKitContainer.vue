@@ -6,10 +6,10 @@
 import PSPDFKit from "pspdfkit";
 
 export default {
-  name: 'PSPDFKit',
+  name: "PSPDFKit",
   /**
-	 * The component receives `pdfFile` prop which is type of String and required
-	 */
+   * The component receives `pdfFile` prop which is type of String and required
+   */
   props: {
     pdfFile: {
       type: String,
@@ -17,16 +17,16 @@ export default {
     },
   },
   /**
-	* We wait until the template has been rendered to load the document into the library.
-	*/
+   * We wait until the template has been rendered to load the document into the library.
+   */
   mounted() {
     this.loadPSPDFKit().then((instance) => {
       this.$emit("loaded", instance);
     });
   },
   /**
-	 * We watch for `pdfFile` prop changes and trigger unloading and loading when there's a new document to load.
-	 */
+   * We watch for `pdfFile` prop changes and trigger unloading and loading when there's a new document to load.
+   */
   watch: {
     pdfFile(val) {
       if (val) {
@@ -35,8 +35,8 @@ export default {
     },
   },
   /**
-	 * Our component has `loadPSPDFKit` method, this unloads and cleanup the component and triggers document loading.
-	 */
+   * Our component has `loadPSPDFKit` method, this unloads and cleanup the component and triggers document loading.
+   */
   methods: {
     async loadPSPDFKit() {
       PSPDFKit.unload(".pdf-container");
@@ -49,14 +49,13 @@ export default {
   },
 
   /**
-	 * Clean up when the component is unmounted; so, it is ready to load another document.
-	 */
+   * Clean up when the component is unmounted; so, it is ready to load another document.
+   */
   beforeUnmount() {
     PSPDFKit.unload(".pdf-container");
   },
 };
 </script>
-
 
 <style scoped>
 .pdf-container {

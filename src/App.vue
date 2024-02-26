@@ -3,8 +3,9 @@
     <!-- <label for="file-upload" class="custom-file-upload">
     Open PDF
     </label> -->
+    <button @click="requestFullscreen()">Full Screen</button>
     <input id="file-upload" type="file" @change="openDocument" class="btn" />
-    <PSPDFKitContainer :pdfFile="pdfFile" @loaded="handleLoaded" />
+    <PSPDFKitContainer ref="pspdfkitContainer" :pdfFile="pdfFile" @loaded="handleLoaded" />
   </div>
 </template>
 
@@ -38,6 +39,18 @@ export default {
         window.URL.revokeObjectURL(this.pdfFile);
       }
       this.pdfFile = window.URL.createObjectURL(event.target.files[0]);
+    },
+    requestFullscreen() {
+      const element = this.$refs.pspdfkitContainer.$el;
+      if (element.requestFullscreen) {
+        element.requestFullscreen();
+      } else if (element.mozRequestFullScreen) {
+        element.mozRequestFullScreen();
+      } else if (element.webkitRequestFullscreen) {
+        element.webkitRequestFullscreen();
+      } else if (element.msRequestFullscreen) {
+        element.msRequestFullscreen();
+      }
     },
   },
 };
