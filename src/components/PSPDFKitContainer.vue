@@ -42,6 +42,7 @@ export default {
       PSPDFKit.unload(".pdf-container");
       return PSPDFKit.load({
         // access the pdfFile from props
+        locale: "ja",
         document: this.pdfFile,
         container: ".pdf-container",
       });
