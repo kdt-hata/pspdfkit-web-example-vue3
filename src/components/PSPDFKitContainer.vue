@@ -45,6 +45,8 @@ export default {
         locale: "ja",
         document: this.pdfFile,
         container: ".pdf-container",
+        licenseKey:
+          "zY7aX0blzVGyQasPRUMP2oVyGFo2Tfsnmb_iW4_5Lg4eE1vw4s2WeJaajnubgL8tYhpdIJKycml_-27aIpj7llTnVOJ4krE_y7Uc4RAwQtCSR-YAU9V0wxqJYe2f5mdf4MUhSXTJ8PZorOgvXkWbTdBRl68sV4e40MIWJujpg9yA_DPAr5EWcEzcWewNwdA1gXRhxe8P55n7dJCcr59l9LEdbIjOCNtVyfPgfuOKEcFCmtTK4HbOL9Zb0eVrQP19dI2rUWqrFGPMCVHycv6XIz70ujSK2Ce-rJ6HvPERpTCN9l9dP3WPDszB0ZVYxgc-UxGO5DZHEowTf8EQpWKX63j6sgoIaRit1He0Ml0DqqSOIeXIK2bPFT2TQ0GeEyestspotBA1t5UucFNS1XlUQNwYU8Ch5trzvKpk62ii_R4fMFPhYhSwE_oJXODkVTvB0fKdh9yTV_YybseAcDqCWQ-_R5GAP3DGxXHSb2lrpdvglRA1yGiSOqBjfoVeu42Yk_njfWwh6S8D8ScN-6zeQTl0CZvgQyDYR3D46punwhUj119FSvrJc6FE9Y-9W0sRIKOX7IgBn718CB2eg7EHmA==",
       });
     },
   },
